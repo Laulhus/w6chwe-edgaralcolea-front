@@ -38,4 +38,18 @@ describe("Given a robotReducer function", () => {
       expect(newRobots).toEqual(expectedRobots);
     });
   });
+
+  describe("When it doesn't receive neither action nor state", () => {
+    test("Then it should return the currentRobots", () => {
+      const expectedRobots = [];
+      const action = {
+        type: "test",
+        robots: expectedRobots,
+      };
+
+      const newRobots = robotReducer();
+
+      expect(newRobots).toEqual(expectedRobots);
+    });
+  });
 });
