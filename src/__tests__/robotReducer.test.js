@@ -1,5 +1,5 @@
 import actionTypes from "../redux/actions/actionTypes";
-import robotReducer from "../redux/store/reducers/robotReducer";
+import robotReducer from "../redux/reducers/robotReducer";
 
 describe("Given a robotReducer function", () => {
   describe("When it receives a loadRobotsAction with a robots array", () => {
