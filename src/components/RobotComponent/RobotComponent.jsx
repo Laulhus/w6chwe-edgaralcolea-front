@@ -1,18 +1,17 @@
 import React from "react";
 import StyledRobot from "./RobotComponent.style";
 
-function RobotComponent() {
+function RobotComponent({
+  robot: { name, img, speed, endurance, creationDate },
+}) {
   return (
     <StyledRobot>
-      <img
-        src="https://media.istockphoto.com/vectors/cute-white-robot-character-vector-vector-id1187576166?k=20&m=1187576166&s=612x612&w=0&h=q-REVReHr8QRzKQ_TRWGU7KTP6OBIgGh-zlg91-S-j0="
-        alt="Test"
-      />
+      <img src={img} alt="Test" />
       <ul>
-        <li className="data-item">Test Robot</li>
-        <li className="data-item">3</li>
-        <li className="data-item">2</li>
-        <li className="data-item">19-02-2022</li>
+        <li className="name-text">{name}</li>
+        <li className="speed-text">{`Speed: ${speed}`}</li>
+        <li className="endurance-text">{`Endurance: ${endurance}`}</li>
+        <li className="date-text">{`Creation: ${creationDate}`}</li>
       </ul>
     </StyledRobot>
   );

@@ -3,7 +3,7 @@ name: Testing on push
 on: push
 
 env:
-  REACT_APP_API_URL: https://w6-chwe-edgaralcolea-back.herokuapp.com/robots/
+  REACT_APP_API_URL: ${{env.REACT_APP_API_URL}}
 
 jobs:
   test:
