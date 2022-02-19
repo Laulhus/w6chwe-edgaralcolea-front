@@ -24,4 +24,18 @@ describe("Given a robotReducer function", () => {
       expect(newRobots).toEqual(expectedRobots);
     });
   });
+
+  describe("When it receives an action with type:'test'", () => {
+    test("Then it should return the currentRobots", () => {
+      const expectedRobots = [];
+      const action = {
+        type: "test",
+        robots: expectedRobots,
+      };
+
+      const newRobots = robotReducer([], action);
+
+      expect(newRobots).toEqual(expectedRobots);
+    });
+  });
 });
