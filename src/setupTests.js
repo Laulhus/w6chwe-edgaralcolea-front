@@ -15,4 +15,5 @@ const renderWithProviders = (component) => {
 
   return render(component, { wrapper: Providers });
 };
+
 export default renderWithProviders;
