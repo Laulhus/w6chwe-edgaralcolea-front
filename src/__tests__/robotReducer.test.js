@@ -42,10 +42,6 @@ describe("Given a robotReducer function", () => {
   describe("When it doesn't receive neither action nor state", () => {
     test("Then it should return the currentRobots", () => {
       const expectedRobots = [];
-      const action = {
-        type: "test",
-        robots: expectedRobots,
-      };
 
       const newRobots = robotReducer();
 
