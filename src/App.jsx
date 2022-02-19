@@ -1,5 +1,6 @@
 import React from "react";
 import NavComponent from "./components/Nav/NavComponent";
+import RobotComponent from "./components/RobotComponent/RobotComponent";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <div className="main row justify-content-center align-items-center">
           <div className="grid col-12 ">
             <ul className="robot-list list-unstyled">
-              <li className="list-item robot-card">Test Robot</li>
+              <RobotComponent />
             </ul>
           </div>
         </div>

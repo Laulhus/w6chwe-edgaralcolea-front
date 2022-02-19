@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
-import NavComponent from "./NavComponent";
+import NavComponent from "../components/Nav/NavComponent";
 
 describe("Given a NavComponent component", () => {
   describe("When instantiated", () => {
