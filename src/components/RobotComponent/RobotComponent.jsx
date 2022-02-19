@@ -1,8 +1,9 @@
 import React from "react";
+import StyledRobot from "./RobotComponent.style";
 
 function RobotComponent() {
   return (
-    <div>
+    <StyledRobot>
       <img
         src="https://media.istockphoto.com/vectors/cute-white-robot-character-vector-vector-id1187576166?k=20&m=1187576166&s=612x612&w=0&h=q-REVReHr8QRzKQ_TRWGU7KTP6OBIgGh-zlg91-S-j0="
         alt="Test"
@@ -13,7 +14,7 @@ function RobotComponent() {
         <li className="data-item">2</li>
         <li className="data-item">19-02-2022</li>
       </ul>
-    </div>
+    </StyledRobot>
   );
 }
 export default RobotComponent;

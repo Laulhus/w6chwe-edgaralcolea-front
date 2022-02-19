@@ -8,8 +8,8 @@ function App() {
       <div className="header">
         <NavComponent />
         <div className="main row justify-content-center align-items-center">
-          <div className="grid col-12 ">
-            <ul className="robot-list list-unstyled">
+          <div className="grid col-12 row justify-content-center ">
+            <ul className="col-8 robot-list list-unstyled">
               <RobotComponent />
             </ul>
           </div>
