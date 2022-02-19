@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import NavComponent from "./components/Nav/NavComponent";
 import RobotComponent from "./components/RobotComponent/RobotComponent";
+import loadRobotsThunk from "./redux/thunks/loadRobotsThunk";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadRobotsThunk);
+  }, [dispatch]);
+
   return (
     <div className="container-fluid">
       <div className="header">

@@ -2,9 +2,6 @@ name: Testing on push
 
 on: push
 
-env:
-  REACT_APP_API_URL: https://w6-chwe-edgaralcolea-back.herokuapp.com/robots/
-
 jobs:
   test:
     name: Test passes
