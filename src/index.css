@@ -13,7 +13,5 @@
 }
 .grid {
   background-color: rgb(82, 90, 90);
-}
-.robot-list {
-  background-color: bisque;
+  padding: 50px;
 }

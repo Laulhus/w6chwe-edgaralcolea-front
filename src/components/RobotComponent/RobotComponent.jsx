@@ -15,7 +15,7 @@ function RobotComponent({
         <li className="endurance-text">{`Endurance: ${endurance}`}</li>
         <li className="date-text">{`Creation: ${creationDate}`}</li>
       </ul>
-      <FontAwesomeSvgIcon icon={faTrashCan} size={"2x"} />
+      <FontAwesomeSvgIcon className={"icon"} icon={faTrashCan} size={"2x"} />
     </StyledRobot>
   );
 }
