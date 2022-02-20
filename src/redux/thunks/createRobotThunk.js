@@ -1,7 +1,6 @@
 import { createRobotAction } from "../actions/actionCreators";
 
 const createRobotThunk = (robot) => async (dispatch) => {
-  debugger;
   const apiURL = process.env.REACT_APP_API_URL;
   const response = await fetch(`${apiURL}create`, {
     method: "POST",
@@ -11,7 +10,7 @@ const createRobotThunk = (robot) => async (dispatch) => {
     body: JSON.stringify(robot),
   });
   if (response.ok) {
-    dispatch(createRobotAction(robot));
+    dispatch(createRobotAction(response.body));
   }
 };
 
