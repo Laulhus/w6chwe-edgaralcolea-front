@@ -10,7 +10,8 @@ const createRobotThunk = (robot) => async (dispatch) => {
     body: JSON.stringify(robot),
   });
   if (response.ok) {
-    dispatch(createRobotAction(response.body));
+    const newRobot = await response.json();
+    dispatch(createRobotAction(newRobot));
   }
 };
 

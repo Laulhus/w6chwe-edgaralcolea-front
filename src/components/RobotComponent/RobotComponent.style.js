@@ -9,6 +9,7 @@ const StyledRobot = styled.li`
   border: 1px solid rgb(73, 53, 54);
   border-radius: 20px;
   background-color: bisque;
+  margin-top: 15px;
   &:hover {
     background-color: lightblue;
     cursor: pointer;

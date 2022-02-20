@@ -7,7 +7,6 @@ import StyledRobot from "./RobotComponent.style";
 function RobotComponent({
   robot: { _id, name, img, speed, endurance, creationDate },
   actionOnClick,
-  navigateClick,
 }) {
   const handleClick = (event) => {
     event.stopPropagation();
@@ -15,7 +14,7 @@ function RobotComponent({
   };
 
   return (
-    <StyledRobot onClick={navigateClick}>
+    <StyledRobot>
       <img src={img} alt="A robot" />
       <ul>
         <li className="name-text">{name}</li>
