@@ -1,5 +1,6 @@
 import {
   deleteRobotAction,
+  loadRobotAction,
   loadRobotsAction,
 } from "../redux/actions/actionCreators";
 
@@ -21,6 +22,21 @@ describe("Given a loadRobotsAction function", () => {
         robots,
       };
       const action = loadRobotsAction(robots);
+
+      expect(action).toEqual(expectedAction);
+    });
+  });
+});
+
+describe("Given a loadRobotAction function", () => {
+  describe("When called with an id", () => {
+    test('Then it should return an action object with type: "load-robot" and the id', () => {
+      const id = 3;
+      const expectedAction = {
+        type: "load-robot",
+        id,
+      };
+      const action = loadRobotAction(id);
 
       expect(action).toEqual(expectedAction);
     });
