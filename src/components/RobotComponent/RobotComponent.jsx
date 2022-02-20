@@ -7,13 +7,14 @@ import StyledRobot from "./RobotComponent.style";
 function RobotComponent({
   robot: { _id, name, img, speed, endurance, creationDate },
   actionOnClick,
+  navigateClick,
 }) {
   const handleClick = () => {
     actionOnClick(_id);
   };
 
   return (
-    <StyledRobot>
+    <StyledRobot onClick={navigateClick}>
       <img src={img} alt="A robot" />
       <ul>
         <li className="name-text">{name}</li>
