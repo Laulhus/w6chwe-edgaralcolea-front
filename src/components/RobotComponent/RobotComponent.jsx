@@ -1,4 +1,6 @@
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import { FontAwesomeSvgIcon } from "react-fontawesome-svg-icon";
 import StyledRobot from "./RobotComponent.style";
 
 function RobotComponent({
@@ -13,6 +15,7 @@ function RobotComponent({
         <li className="endurance-text">{`Endurance: ${endurance}`}</li>
         <li className="date-text">{`Creation: ${creationDate}`}</li>
       </ul>
+      <FontAwesomeSvgIcon className={"icon"} icon={faTrashCan} size={"2x"} />
     </StyledRobot>
   );
 }
