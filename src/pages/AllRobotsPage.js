@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import RobotComponent from "../components/RobotComponent/RobotComponent";
 import deleteRobotThunk from "../redux/thunks/deleteRobotThunk";
 import loadRobotsThunk from "../redux/thunks/loadRobotsThunk";
