@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import AllRobotsPage from "./pages/AllRobotsPage";
-import RobotPage from "./pages/RobotPage";
+import CreateRobotPage from "./pages/CreateRobotPage";
 
 function App() {
   return (
     <div className="container-fluid">
       <Link to="/robots">All robots</Link>
+      <Link to="/create">Create Robot</Link>
       <Routes>
         <Route path="/" element={<Navigate to="/robots" />} />
         <Route path="/robots" element={<AllRobotsPage />} />
-        <Route path="/robots/:id" element={<RobotPage />} />
+        <Route path="/create" element={<CreateRobotPage />} />
       </Routes>
     </div>
   );

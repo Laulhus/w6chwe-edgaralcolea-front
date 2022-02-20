@@ -1,4 +1,5 @@
 import {
+  createRobotAction,
   deleteRobotAction,
   loadRobotsAction,
 } from "../redux/actions/actionCreators";
@@ -18,9 +19,27 @@ describe("Given a loadRobotsAction function", () => {
       ];
       const expectedAction = {
         type: "load-robots",
-        robots: robots.robots,
+        robots,
       };
       const action = loadRobotsAction(robots);
+
+      expect(action).toEqual(expectedAction);
+    });
+  });
+});
+
+describe("Given a createRobotAction function", () => {
+  describe("When called with a robot", () => {
+    test('Then it should return an action object with type: "create-robot" and the robot', () => {
+      const robot = {
+        name: "Cybermen",
+        speed: 2,
+      };
+      const expectedAction = {
+        type: "create-robot",
+        robot,
+      };
+      const action = createRobotAction(robot);
 
       expect(action).toEqual(expectedAction);
     });
