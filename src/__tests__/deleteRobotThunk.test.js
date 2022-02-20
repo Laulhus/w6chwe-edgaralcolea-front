@@ -30,7 +30,7 @@ describe("Given a deleteRobotThunk inner function", () => {
 
       await thunkFunction(dispatch);
 
-      expect(dispatch).not.toHaveBeenCalled();
+      expect(dispatch).not.toHaveBeenCalledWith(expectedAction);
     });
   });
 });
