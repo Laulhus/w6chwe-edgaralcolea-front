@@ -14,7 +14,7 @@ function RobotComponent({
 
   return (
     <StyledRobot>
-      <img src={img} alt="A robot image" />
+      <img src={img} alt="A robot" />
       <ul>
         <li className="name-text">{name}</li>
         <li className="speed-text">{`Speed: ${speed}`}</li>
