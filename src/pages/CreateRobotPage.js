@@ -35,6 +35,7 @@ const CreateRobotPage = () => {
     dispatch(createRobotThunk(formData));
     navigate("/robots");
   };
+
   const dispatch = useDispatch();
 
   return (
@@ -86,9 +87,11 @@ const CreateRobotPage = () => {
                 onChange={changeData}
               />
             </div>
-            <button type="submit" disabled={isFormInvalid}>
-              Create!
-            </button>
+            <div className="button-container">
+              <button type="submit" disabled={isFormInvalid}>
+                Create!
+              </button>
+            </div>
           </form>
         </div>
       </div>

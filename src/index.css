@@ -31,8 +31,22 @@ a:hover {
 .form {
   display: flex;
   flex-direction: column;
+  font-size: 25px;
+  color: #edd736;
 }
 .navbar {
   display: flex;
   justify-content: space-around;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.button-container button {
+  background-color: #ffe625;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 20px;
 }
