@@ -86,9 +86,11 @@ const CreateRobotPage = () => {
                 onChange={changeData}
               />
             </div>
-            <button type="submit" disabled={isFormInvalid}>
-              Create!
-            </button>
+            <div className="button-container">
+              <button type="submit" disabled={isFormInvalid}>
+                Create!
+              </button>
+            </div>
           </form>
         </div>
       </div>
