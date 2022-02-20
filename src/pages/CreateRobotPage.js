@@ -57,6 +57,8 @@ const CreateRobotPage = () => {
                 id="speed"
                 value={formData.speed}
                 onChange={changeData}
+                min={0}
+                max={10}
               />
               <label htmlFor="endurance">Endurance:</label>{" "}
               <input
@@ -64,6 +66,8 @@ const CreateRobotPage = () => {
                 id="endurance"
                 value={formData.endurance}
                 onChange={changeData}
+                min={0}
+                max={10}
               />
               <label htmlFor="creationDate">Created on:</label>{" "}
               <input
