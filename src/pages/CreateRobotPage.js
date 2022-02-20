@@ -35,6 +35,7 @@ const CreateRobotPage = () => {
     dispatch(createRobotThunk(formData));
     navigate("/robots");
   };
+
   const dispatch = useDispatch();
 
   return (

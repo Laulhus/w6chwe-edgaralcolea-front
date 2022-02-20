@@ -22,7 +22,10 @@ const AllRobotsPage = () => {
       </ul>
       <div className="main row justify-content-center align-items-center">
         <div className="grid row align-items-center justify-content-center ">
-          <ul className="col-8 robot-list d-flex flex-wrap align-content-around justify-content-around">
+          <ul
+            title="robot-list"
+            className="col-8 robot-list d-flex flex-wrap align-content-around justify-content-around"
+          >
             {robots.map((robot) => (
               <RobotComponent
                 key={robot._id}
