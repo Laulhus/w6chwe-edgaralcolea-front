@@ -18,7 +18,7 @@ describe("Given a loadRobotsAction function", () => {
       ];
       const expectedAction = {
         type: "load-robots",
-        robots: robots.robots,
+        robots,
       };
       const action = loadRobotsAction(robots);
 
