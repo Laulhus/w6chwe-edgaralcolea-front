@@ -90,4 +90,51 @@ describe("Given a robotReducer function", () => {
       expect(newRobots).toEqual(expectedRobots);
     });
   });
+
+  describe("When it receives a createRobotAction with a robot", () => {
+    test("Then it should return an array with the current robots and the new one", () => {
+      const inputRobots = [
+        {
+          _id: 1,
+          name: "Dummy",
+          speed: 6,
+        },
+        {
+          _id: 2,
+          name: "Tardis",
+          speed: 8,
+        },
+      ];
+      const expectedRobots = [
+        {
+          _id: 1,
+          name: "Dummy",
+          speed: 6,
+        },
+        {
+          _id: 2,
+          name: "Tardis",
+          speed: 8,
+        },
+        {
+          _id: 3,
+          name: "Cybermen",
+          speed: 2,
+        },
+      ];
+      const robot = {
+        _id: 3,
+        name: "Cybermen",
+        speed: 2,
+      };
+      const action = {
+        type: actionTypes.createRobot,
+        robot,
+      };
+
+      const newRobots = robotReducer(inputRobots, action);
+
+      expect(newRobots).toEqual(expectedRobots);
+    });
+  });
 });

@@ -1,4 +1,5 @@
 import {
+  createRobotAction,
   deleteRobotAction,
   loadRobotAction,
   loadRobotsAction,
@@ -28,15 +29,18 @@ describe("Given a loadRobotsAction function", () => {
   });
 });
 
-describe("Given a loadRobotAction function", () => {
-  describe("When called with an id", () => {
-    test('Then it should return an action object with type: "load-robot" and the id', () => {
-      const id = 3;
-      const expectedAction = {
-        type: "load-robot",
-        id,
+describe("Given a createRobotAction function", () => {
+  describe("When called with a robot", () => {
+    test('Then it should return an action object with type: "create-robot" and the robot', () => {
+      const robot = {
+        name: "Cybermen",
+        speed: 2,
       };
-      const action = loadRobotAction(id);
+      const expectedAction = {
+        type: "create-robot",
+        robot,
+      };
+      const action = createRobotAction(robot);
 
       expect(action).toEqual(expectedAction);
     });

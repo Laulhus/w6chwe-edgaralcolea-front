@@ -6,6 +6,9 @@ const robotReducer = (currentRobots = [], action = {}) => {
     case actionTypes.loadRobots:
       newRobots = [...action.robots];
       break;
+    case actionTypes.createRobot:
+      newRobots = [...currentRobots, action.robot];
+      break;
     case actionTypes.deleteRobot:
       newRobots = currentRobots.filter((robot) => robot._id !== action.id);
       break;
