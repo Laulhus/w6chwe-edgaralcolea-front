@@ -17,7 +17,7 @@ describe("Given a RobotComponent component", () => {
 
       renderWithProviders(<RobotComponent robot={robot} />);
 
-      const element = screen.queryByAltText("A robot image");
+      const element = screen.queryByAltText("A robot");
 
       expect(element).toBeInTheDocument();
     });
