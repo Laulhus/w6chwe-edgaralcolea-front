@@ -1,5 +1,5 @@
 const actionTypes = {
   loadRobots: "load-robots",
-  deleteRobots: "delete-robots",
+  deleteRobot: "delete-robot",
 };
 export default actionTypes;
