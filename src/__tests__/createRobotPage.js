@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import CreateRobotPage from "../pages/createRobotPage";
+import CreateRobotPage from "../pages/CreateRobotPage";
 
 import renderWithProviders from "../setupTests";
 
