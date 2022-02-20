@@ -6,8 +6,10 @@ import CreateRobotPage from "./pages/CreateRobotPage";
 function App() {
   return (
     <div className="container-fluid">
-      <Link to="/robots">All robots</Link>
-      <Link to="/create">Create Robot</Link>
+      <div className="navbar">
+        <Link to="/robots">All robots</Link>
+        <Link to="/create">Create Robot</Link>
+      </div>
       <Routes>
         <Route path="/" element={<Navigate to="/robots" />} />
         <Route path="/robots" element={<AllRobotsPage />} />

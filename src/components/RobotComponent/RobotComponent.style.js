@@ -9,14 +9,22 @@ const StyledRobot = styled.li`
   border: 1px solid rgb(73, 53, 54);
   border-radius: 20px;
   background-color: bisque;
+  margin-top: 15px;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  font-weight: 500;
   &:hover {
     background-color: lightblue;
     cursor: pointer;
+    transform: scale(1.1);
   }
   ul {
     display: flex;
     flex-direction: column;
     list-style: none;
+  }
+  li {
+    padding-top: 10px;
   }
   img {
     height: 230px;
@@ -26,9 +34,11 @@ const StyledRobot = styled.li`
   .icon {
     padding-top: 15px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
     &:hover {
       color: #d32c2c;
       cursor: pointer;
+      transform: scale(1.1);
     }
   }
 `;

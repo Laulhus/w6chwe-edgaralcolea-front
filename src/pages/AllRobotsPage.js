@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import RobotComponent from "../components/RobotComponent/RobotComponent";
 import deleteRobotThunk from "../redux/thunks/deleteRobotThunk";
 import loadRobotsThunk from "../redux/thunks/loadRobotsThunk";
@@ -13,11 +12,6 @@ const AllRobotsPage = () => {
     dispatch(loadRobotsThunk);
   }, [dispatch]);
 
-  const navigate = useNavigate();
-  const goToPage = (id) => {
-    navigate(`/robots/${id}`);
-  };
-
   const deleteRobot = (id) => {
     dispatch(deleteRobotThunk(id));
   };
@@ -28,13 +22,12 @@ const AllRobotsPage = () => {
       </ul>
       <div className="main row justify-content-center align-items-center">
         <div className="grid row align-items-center justify-content-center ">
-          <ul className="col-8 robot-list d-flex justify-content-around">
+          <ul className="col-8 robot-list d-flex flex-wrap align-content-around justify-content-around">
             {robots.map((robot) => (
               <RobotComponent
                 key={robot._id}
                 robot={robot}
                 actionOnClick={deleteRobot}
-                navigateClick={() => goToPage(robot._id)}
               />
             ))}
           </ul>
