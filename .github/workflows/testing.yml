@@ -3,7 +3,7 @@ name: Testing on push
 on: push
 
 env:
-  REACT_APP_API_URL: ${{env.REACT_APP_API_URL}}
+  REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
 
 jobs:
   test:
