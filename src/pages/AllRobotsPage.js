@@ -15,7 +15,7 @@ const AllRobotsPage = () => {
 
   const navigate = useNavigate();
   const goToPage = (id) => {
-    navigate(`/robot/${id}`);
+    navigate(`/robots/${id}`);
   };
 
   const deleteRobot = (id) => {

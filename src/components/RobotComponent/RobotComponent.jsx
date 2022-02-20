@@ -9,7 +9,8 @@ function RobotComponent({
   actionOnClick,
   navigateClick,
 }) {
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.stopPropagation();
     actionOnClick(_id);
   };
 
