@@ -1,7 +1,6 @@
 import {
   createRobotAction,
   deleteRobotAction,
-  loadRobotAction,
   loadRobotsAction,
 } from "../redux/actions/actionCreators";
 
