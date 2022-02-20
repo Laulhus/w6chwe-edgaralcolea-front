@@ -1,8 +1,7 @@
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { FontAwesomeSvgIcon } from "react-fontawesome-svg-icon";
-
-import StyledRobot from "./RobotComponent.style";
+import StyledRobot from "./StyledRobot.style";
 
 function RobotComponent({
   robot: { _id, name, img, speed, endurance, creationDate },
