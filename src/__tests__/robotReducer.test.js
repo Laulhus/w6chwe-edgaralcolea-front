@@ -53,29 +53,29 @@ describe("Given a robotReducer function", () => {
     test("Then it should return an array with 'Dummy' and 'Cybermen' robot", () => {
       const inputRobots = [
         {
-          id: 1,
+          _id: 1,
           name: "Dummy",
           speed: 6,
         },
         {
-          id: 2,
+          _id: 2,
           name: "Tardis",
           speed: 8,
         },
         {
-          id: 3,
+          _id: 3,
           name: "Cybermen",
           speed: 2,
         },
       ];
       const expectedRobots = [
         {
-          id: 1,
+          _id: 1,
           name: "Dummy",
           speed: 6,
         },
         {
-          id: 3,
+          _id: 3,
           name: "Cybermen",
           speed: 2,
         },

@@ -1,11 +1,15 @@
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { FontAwesomeSvgIcon } from "react-fontawesome-svg-icon";
+import { useDispatch } from "react-redux";
+import deleteRobotThunk from "../../redux/thunks/deleteRobotThunk";
 import StyledRobot from "./RobotComponent.style";
 
 function RobotComponent({
-  robot: { name, img, speed, endurance, creationDate },
+  robot: { _id, name, img, speed, endurance, creationDate },
 }) {
+  const dispatch = useDispatch();
+
   return (
     <StyledRobot>
       <img src={img} alt="Test" />
@@ -15,7 +19,12 @@ function RobotComponent({
         <li className="endurance-text">{`Endurance: ${endurance}`}</li>
         <li className="date-text">{`Creation: ${creationDate}`}</li>
       </ul>
-      <FontAwesomeSvgIcon className={"icon"} icon={faTrashCan} size={"2x"} />
+      <FontAwesomeSvgIcon
+        className={"icon"}
+        icon={faTrashCan}
+        size={"2x"}
+        onClick={() => dispatch(deleteRobotThunk(_id))}
+      />
     </StyledRobot>
   );
 }
