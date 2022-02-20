@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import createRobotThunk from "../redux/thunks/createRobotThunk";
 
 const CreateRobotPage = () => {
   const blankForm = {
@@ -26,6 +28,13 @@ const CreateRobotPage = () => {
     });
   };
 
+  const navigate = useNavigate();
+
+  const submitData = (event) => {
+    event.preventDefault();
+    dispatch(createRobotThunk(formData));
+    navigate("/robots");
+  };
   const dispatch = useDispatch();
 
   return (
@@ -35,7 +44,7 @@ const CreateRobotPage = () => {
       </ul>
       <div className="main row justify-content-center align-items-center">
         <div className="form-container col-8">
-          <form noValidate autoComplete="off">
+          <form noValidate autoComplete="off" onSubmit={submitData}>
             <div className="form">
               <label htmlFor="name">Name:</label>{" "}
               <input
