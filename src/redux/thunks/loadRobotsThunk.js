@@ -1,4 +1,4 @@
-import loadRobotsAction from "../actions/actionCreators";
+import { loadRobotsAction } from "../actions/actionCreators";
 
 const loadRobotsThunk = async (dispatch) => {
   const apiURL = process.env.REACT_APP_API_URL;
